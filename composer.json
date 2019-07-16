@@ -34,7 +34,6 @@
     },
     "require": {
         "php": "~7.0",
-        "m-rubin-itmegastar-com/lock": "^2.5",
         "psr/log": "^1"
     },
     "require-dev": {
