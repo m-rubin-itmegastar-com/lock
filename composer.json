@@ -33,7 +33,8 @@
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": "~7.0",
+        "m-rubin-itmegastar-com/lock": "^2.5",
         "psr/log": "^1"
     },
     "require-dev": {
@@ -75,6 +76,9 @@
         "fix-cs": "vendor/bin/phpcbf --standard=PSR2 classes/ tests/"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+         "platform": {
+            "php": "7.0"
+        }
     }
 }
