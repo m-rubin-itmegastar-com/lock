@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use Eloquent\Liberator\Liberator;
-use malkusch\lock\util\PcntlTimeout;
+use m_rubin_itmegastar_com\lock\util\PcntlTimeout;
 
 /**
  * @author Willem Stuursma-Ruwen <willem@stuursma.name>
@@ -52,7 +52,7 @@ class FlockMutexTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 1 seconds exceeded.
      * @dataProvider dpTimeoutableStrategies
      */
@@ -83,7 +83,7 @@ class FlockMutexTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \malkusch\lock\exception\DeadlineException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\DeadlineException
      */
     public function testNoTimeoutWaitsForever()
     {

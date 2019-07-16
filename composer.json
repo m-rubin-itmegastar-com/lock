@@ -24,7 +24,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {"malkusch\\lock\\": "classes/"}
+        "psr-4": {"m_rubin_itmegastar_com\\lock\\": "classes/"}
     },
     "config": {
         "sort-packages": true

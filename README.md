@@ -7,13 +7,13 @@ This library helps executing critical code in concurrent situations.
 Use [Composer](https://getcomposer.org/):
 
 ```sh
-composer require malkusch/lock
+composer require m_rubin_itmegastar_com/lock
 ```
 
 # Usage
 
 The package is in the namespace
-[`malkusch\lock`](http://malkusch.github.io/lock/api/namespace-malkusch.lock.html).
+[`m_rubin_itmegastar_com\lock`](http://malkusch.github.io/lock/api/namespace-malkusch.lock.html).
 
 ## Mutex
 

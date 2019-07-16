@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\exception;
+namespace m_rubin_itmegastar_com\lock\exception;
 
 /**
  * A Mutex exception.

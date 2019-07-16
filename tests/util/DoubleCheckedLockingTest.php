@@ -1,8 +1,8 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
-use malkusch\lock\mutex\Mutex;
+use m_rubin_itmegastar_com\lock\mutex\Mutex;
 
 /**
  * Tests for DoubleCheckedLocking.

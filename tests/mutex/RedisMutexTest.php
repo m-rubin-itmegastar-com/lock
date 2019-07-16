@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
 
@@ -28,7 +28,7 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
         
         $sleepBuilder = new SleepEnvironmentBuilder();
         $sleepBuilder->addNamespace(__NAMESPACE__);
-        $sleepBuilder->addNamespace('malkusch\lock\util');
+        $sleepBuilder->addNamespace('m_rubin_itmegastar_com\lock\util');
         $sleep = $sleepBuilder->build();
 
         $sleep->enable();
@@ -62,8 +62,8 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
      * @param int $available The count of available servers.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockAcquireException
-     * @expectedExceptionCode \malkusch\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
+     * @expectedExceptionCode \m_rubin_itmegastar_com\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
      * @dataProvider provideMinority
      */
     public function testTooFewServerToAcquire($count, $available)
@@ -124,7 +124,7 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
      * @param int $available The count of available servers.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 1 seconds exceeded.
      * @dataProvider provideMinority
      */
@@ -153,7 +153,7 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
      * @param int $delay The delay in microseconds.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @dataProvider provideTestTimingOut
      */
     public function testTimingOut($count, $timeout, $delay)
@@ -217,7 +217,7 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
      * @param int $available The count of available servers.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      * @dataProvider provideMinority
      */
     public function testTooFewServersToRelease($count, $available)
@@ -248,7 +248,7 @@ class RedisMutexTest extends \PHPUnit_Framework_TestCase
      * @param int $available The count of available servers.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      * @dataProvider provideMinority
      */
     public function testReleaseTooFewKeys($count, $available)

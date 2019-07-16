@@ -1,12 +1,12 @@
 <?php
 
-namespace malkusch\lock\exception;
+namespace m_rubin_itmegastar_com\lock\exception;
 
 /**
  * This exception should be thrown when for example the lock is released or
  * times out before the synchronized code finished execution.
  *
- * @see \malkusch\lock\mutex\SpinlockMutex::unlock()
+ * @see \m_rubin_itmegastar_com\lock\mutex\SpinlockMutex::unlock()
  *
  * @author Petr Levtonov <petr@levtonov.com>
  * @license WTFPL

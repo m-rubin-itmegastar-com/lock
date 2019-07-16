@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 /**
  * Tests for TransactionalMutex.
@@ -47,7 +47,7 @@ class TransactionalMutexTest extends \PHPUnit_Framework_TestCase
      * Tests BEGIN fails.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
      * @expectedExceptionMessage Could not begin transaction.
      */
     public function testBeginFails()
@@ -96,7 +96,7 @@ class TransactionalMutexTest extends \PHPUnit_Framework_TestCase
      * Tests that a ROLLBACK caused by an exception fails.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
      */
     public function testFailExceptionRollsback()
     {
@@ -168,7 +168,7 @@ class TransactionalMutexTest extends \PHPUnit_Framework_TestCase
      * Tests failing a ROLLBACK after the failed COMMIT.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
      * @expectedExceptionMessage Could not roll back transaction:
      */
     public function testRollbackAfterFailedCommitFails()

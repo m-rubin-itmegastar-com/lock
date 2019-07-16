@@ -1,10 +1,10 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
-use malkusch\lock\mutex\Mutex;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
+use m_rubin_itmegastar_com\lock\mutex\Mutex;
 
 /**
  * The double-checked locking pattern.

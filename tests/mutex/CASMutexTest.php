@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
@@ -24,7 +24,7 @@ class CASMutexTest extends \PHPUnit_Framework_TestCase
         
         $builder = new SleepEnvironmentBuilder();
         $builder->addNamespace(__NAMESPACE__);
-        $builder->addNamespace('malkusch\lock\util');
+        $builder->addNamespace('m_rubin_itmegastar_com\lock\util');
         $sleep = $builder->build();
         $sleep->enable();
         
@@ -35,7 +35,7 @@ class CASMutexTest extends \PHPUnit_Framework_TestCase
      * Tests exceeding the execution timeout.
      *
      * @test
-     * @expectedException malkusch\lock\exception\LockAcquireException
+     * @expectedException m_rubin_itmegastar_com\lock\exception\LockAcquireException
      */
     public function testExceedTimeout()
     {

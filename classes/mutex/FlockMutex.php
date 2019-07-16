@@ -1,14 +1,14 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\DeadlineException;
-use malkusch\lock\exception\ExecutionOutsideLockException;
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
-use malkusch\lock\exception\TimeoutException;
-use malkusch\lock\util\Loop;
-use malkusch\lock\util\PcntlTimeout;
+use m_rubin_itmegastar_com\lock\exception\DeadlineException;
+use m_rubin_itmegastar_com\lock\exception\ExecutionOutsideLockException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
+use m_rubin_itmegastar_com\lock\exception\TimeoutException;
+use m_rubin_itmegastar_com\lock\util\Loop;
+use m_rubin_itmegastar_com\lock\util\PcntlTimeout;
 
 /**
  * Flock() based mutex implementation.

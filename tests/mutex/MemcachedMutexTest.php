@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 /**
  * Tests for MemcachedMutex.
@@ -31,7 +31,7 @@ class MemcachedMutexTest extends \PHPUnit_Framework_TestCase
      * Tests failing to acquire the lock.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      */
     public function testFailAcquireLock()
     {
@@ -48,7 +48,7 @@ class MemcachedMutexTest extends \PHPUnit_Framework_TestCase
      * Tests failing to release a lock.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testFailReleasingLock()
     {

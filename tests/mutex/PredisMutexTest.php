@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use Predis\Client;
 use Predis\ClientInterface;
@@ -63,8 +63,8 @@ class PredisMutexTest extends \PHPUnit_Framework_TestCase
      * Tests add() fails.
      *
      * @test
-     * @expectedException     \malkusch\lock\exception\LockAcquireException
-     * @expectedExceptionCode \malkusch\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
+     * @expectedException     \m_rubin_itmegastar_com\lock\exception\LockAcquireException
+     * @expectedExceptionCode \m_rubin_itmegastar_com\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
      */
     public function testAddFails()
     {
@@ -83,7 +83,7 @@ class PredisMutexTest extends \PHPUnit_Framework_TestCase
      * Tests evalScript() fails.
      *
      * @test
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testEvalScriptFails()
     {

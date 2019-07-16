@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\util\Loop;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\util\Loop;
 
 /**
  * Serialization is delegated to the DBS.

@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\TimeoutException;
-use malkusch\lock\util\Loop;
+use m_rubin_itmegastar_com\lock\exception\TimeoutException;
+use m_rubin_itmegastar_com\lock\util\Loop;
 
 /**
  * CAS based mutex implementation.
