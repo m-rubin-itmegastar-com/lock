@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +18,8 @@ class PcntlTimeoutTest extends TestCase
     /**
      * A long running system call should be interrupted
      *
-     * @expectedException \malkusch\lock\exception\DeadlineException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\DeadlineException
      */
     public function testShouldTimeout()
     {
@@ -46,7 +47,8 @@ class PcntlTimeoutTest extends TestCase
     /**
      * When a previous scheduled alarm exists, it should fail
      *
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
      */
     public function testShouldFailOnExistingAlarm()
     {

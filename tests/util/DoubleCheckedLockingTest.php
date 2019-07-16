@@ -1,10 +1,8 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
-use malkusch\lock\mutex\Mutex;
-use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
+use m_rubin_itmegastar_com\lock\mutex\Mutex;
 
 /**
  * Tests for DoubleCheckedLocking.

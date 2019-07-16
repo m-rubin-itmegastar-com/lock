@@ -1,12 +1,12 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Psr\Log\LoggerAwareInterface;
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
 
 /**
  * Mutex based on the Redlock algorithm.

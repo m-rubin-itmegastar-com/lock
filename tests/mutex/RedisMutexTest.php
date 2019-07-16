@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
 use PHPUnit\Framework\TestCase;
@@ -28,7 +28,7 @@ class RedisMutexTest extends TestCase
         
         $sleepBuilder = new SleepEnvironmentBuilder();
         $sleepBuilder->addNamespace(__NAMESPACE__);
-        $sleepBuilder->addNamespace('malkusch\lock\util');
+        $sleepBuilder->addNamespace('m_rubin_itmegastar_com\lock\util');
         $sleep = $sleepBuilder->build();
 
         $sleep->enable();
@@ -61,8 +61,9 @@ class RedisMutexTest extends TestCase
      * @param int $count The total count of servers
      * @param int $available The count of available servers.
      *
-     * @expectedException \malkusch\lock\exception\LockAcquireException
-     * @expectedExceptionCode \malkusch\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
+     * @expectedExceptionCode \m_rubin_itmegastar_com\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
      * @dataProvider provideMinority
      */
     public function testTooFewServerToAcquire(int $count, int $available)
@@ -127,7 +128,8 @@ class RedisMutexTest extends TestCase
      * @param int $count The total count of servers
      * @param int $available The count of available servers.
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 1 seconds exceeded.
      * @dataProvider provideMinority
      */
@@ -157,7 +159,8 @@ class RedisMutexTest extends TestCase
      * @param int $timeout The timeout in seconds.
      * @param int $delay The delay in microseconds.
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @dataProvider provideTestTimingOut
      */
     public function testTimingOut(int $count, int $timeout, int $delay)
@@ -225,7 +228,8 @@ class RedisMutexTest extends TestCase
      * @param int $count The total count of servers
      * @param int $available The count of available servers.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      * @dataProvider provideMinority
      */
     public function testTooFewServersToRelease(int $count, int $available)
@@ -259,7 +263,8 @@ class RedisMutexTest extends TestCase
      * @param int $count The total count of servers
      * @param int $available The count of available servers.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      * @dataProvider provideMinority
      */
     public function testReleaseTooFewKeys($count, $available)

@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -72,7 +72,9 @@ class PredisMutexTest extends TestCase
     /**
      * Tests add() errors.
      *
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @test
+     * @expectedException     \m_rubin_itmegastar_com\lock\exception\LockAcquireException
+     * @expectedExceptionCode \m_rubin_itmegastar_com\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
      */
     public function testAddErrors()
     {
@@ -116,7 +118,8 @@ class PredisMutexTest extends TestCase
     /**
      * Tests evalScript() fails.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testEvalScriptFails()
     {

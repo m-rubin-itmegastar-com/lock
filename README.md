@@ -38,12 +38,13 @@ To use this library through [composer][4], run the following terminal command
 inside your repository's root folder.
 
 ```sh
-composer require "malkusch/lock"
+composer require m_rubin_itmegastar_com/lock
 ```
 
 ## Usage
 
-This library uses the namespace `malkusch\lock`.
+The package is in the namespace
+[`m_rubin_itmegastar_com\lock`](http://malkusch.github.io/lock/api/namespace-malkusch.lock.html).
 
 ### Mutex
 

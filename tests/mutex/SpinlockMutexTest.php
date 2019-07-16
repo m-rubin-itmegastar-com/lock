@@ -1,9 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\ExecutionOutsideLockException;
-use malkusch\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\ExecutionOutsideLockException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
 use PHPUnit\Framework\TestCase;
@@ -26,7 +26,7 @@ class SpinlockMutexTest extends TestCase
         
         $builder = new SleepEnvironmentBuilder();
         $builder->addNamespace(__NAMESPACE__);
-        $builder->addNamespace('malkusch\lock\util');
+        $builder->addNamespace('m_rubin_itmegastar_com\lock\util');
         $sleep = $builder->build();
         $sleep->enable();
         
@@ -36,7 +36,8 @@ class SpinlockMutexTest extends TestCase
     /**
      * Tests failing to acquire the lock.
      *
-     * @expectedException \malkusch\lock\exception\LockAcquireException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
      */
     public function testFailAcquireLock()
     {
@@ -51,7 +52,7 @@ class SpinlockMutexTest extends TestCase
     /**
      * Tests failing to acquire the lock due to a timeout.
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 3 seconds exceeded.
      */
     public function testAcquireTimesOut()
@@ -106,7 +107,8 @@ class SpinlockMutexTest extends TestCase
     /**
      * Tests failing to release a lock.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testFailReleasingLock()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
-use malkusch\lock\exception\DeadlineException;
-use malkusch\lock\exception\TimeoutException;
-use malkusch\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\DeadlineException;
+use m_rubin_itmegastar_com\lock\exception\TimeoutException;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
 
 /**
  * Timeout based on a scheduled alarm.

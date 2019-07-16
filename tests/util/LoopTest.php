@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\util;
+namespace m_rubin_itmegastar_com\lock\util;
 
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
@@ -56,7 +56,7 @@ class LoopTest extends TestCase
     /**
      * Tests exceeding the execution timeout.
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 1 seconds exceeded.
      */
     public function testExceedTimeout()
@@ -71,7 +71,7 @@ class LoopTest extends TestCase
     /**
      * Tests exceeding the execution timeout without calling end().
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      * @expectedExceptionMessage Timeout of 1 seconds exceeded.
      */
     public function testExceedTimeoutWithoutExplicitEnd()

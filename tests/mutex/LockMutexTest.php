@@ -1,11 +1,9 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
-use malkusch\lock\exception\LockAcquireException;
-use malkusch\lock\exception\LockReleaseException;
-use PHPUnit\Framework\MockObject\MockObject;
-use PHPUnit\Framework\TestCase;
+use m_rubin_itmegastar_com\lock\exception\LockAcquireException;
+use m_rubin_itmegastar_com\lock\exception\LockReleaseException;
 
 /**
  * Tests for LockMutex.
@@ -32,7 +30,8 @@ class LockMutexTest extends TestCase
     /**
      * Tests lock() fails and the code is not executed.
      *
-     * @expectedException malkusch\lock\exception\LockAcquireException
+     * @test
+     * @expectedException m_rubin_itmegastar_com\lock\exception\LockAcquireException
      */
     public function testLockFails()
     {
@@ -77,7 +76,8 @@ class LockMutexTest extends TestCase
     /**
      * Tests unlock() fails after the code was executed.
      *
-     * @expectedException malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testUnlockFailsAfterCode()
     {
@@ -92,7 +92,10 @@ class LockMutexTest extends TestCase
     /**
      * Tests unlock() fails after the code threw an exception.
      *
-     * @expectedException malkusch\lock\exception\LockReleaseException
+     * The previous exception should be the code's exception.
+     *
+     * @test
+     * @expectedException m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testUnlockFailsAfterException()
     {

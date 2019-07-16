@@ -1,21 +1,9 @@
 {
-    "name": "malkusch/lock",
+    "name": "m-rubin-itmegastar-com/lock",
+    "type": "library",
     "description": "Mutex library for exclusive code execution.",
-    "keywords": [
-        "mutex",
-        "lock",
-        "locking",
-        "flock",
-        "semaphore",
-        "redlock",
-        "memcache",
-        "redis",
-        "cas",
-        "advisory-locks",
-        "mysql",
-        "postgresql"
-    ],
-    "homepage": "https://github.com/malkusch/lock",
+    "keywords": ["mutex", "lock", "locking", "flock", "semaphore", "redlock", "memcache", "redis", "cas", "advisory locks", "mysql", "postgresql"],
+    "homepage": "https://github.com/m-rubin-itmegastar-com/lock",
     "license": "WTFPL",
     "type": "library",
     "authors": [
@@ -29,12 +17,15 @@
             "name": "Willem Stuursma-Ruwen",
             "email": "willem@stuursma.name",
             "role": "Developer"
+        },
+        {
+            "name": "MihanEntalpo",
+            "email": "m.rubin@itmegastar.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
-        "psr-4": {
-            "malkusch\\lock\\": "classes/"
-        }
+        "psr-4": {"m_rubin_itmegastar_com\\lock\\": "classes/"}
     },
     "autoload-dev": {
         "psr-4": {
@@ -51,17 +42,16 @@
         "ext-memcached": "*",
         "ext-pcntl": "*",
         "ext-pdo_mysql": "*",
-        "ext-pdo_sqlite": "*",
         "ext-redis": "*",
         "ext-sysvsem": "*",
         "eloquent/liberator": "^2.0",
-        "johnkary/phpunit-speedtrap": "^3.0",
+        "johnkary/phpunit-speedtrap": "~1.1.0",
         "kriswallsmith/spork": "^0.3",
-        "mikey179/vfsStream": "^1.6",
-        "php-mock/php-mock-phpunit": "^2.1",
-        "phpunit/phpunit": "^7.4",
-        "predis/predis": "^1.1",
-        "squizlabs/php_codesniffer": "^3.3"
+        "mikey179/vfsStream": "^1.5.0",
+        "php-mock/php-mock-phpunit": "^1",
+        "phpunit/phpunit": "~5.0.0",
+        "predis/predis": "~1.0",
+        "squizlabs/php_codesniffer": "^3.2"
     },
     "suggest": {
         "ext-igbinary": "To use this library with PHP Redis igbinary serializer enabled.",

@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use PHPUnit\Framework\TestCase;
 use Redis;
@@ -109,8 +109,11 @@ class PHPRedisMutexTest extends TestCase
     }
 
     /**
-     * @expectedException \malkusch\lock\exception\LockAcquireException
-     * @expectedExceptionCode \malkusch\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
+     * Tests add() fails.
+     *
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockAcquireException
+     * @expectedExceptionCode \m_rubin_itmegastar_com\lock\exception\MutexException::REDIS_NOT_ENOUGH_SERVERS
      */
     public function testAddFails()
     {
@@ -124,7 +127,8 @@ class PHPRedisMutexTest extends TestCase
     /**
      * Tests evalScript() fails.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testEvalScriptFails()
     {

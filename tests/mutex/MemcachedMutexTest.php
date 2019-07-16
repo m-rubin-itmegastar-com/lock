@@ -1,6 +1,6 @@
 <?php
 
-namespace malkusch\lock\mutex;
+namespace m_rubin_itmegastar_com\lock\mutex;
 
 use phpmock\environment\SleepEnvironmentBuilder;
 use phpmock\phpunit\PHPMock;
@@ -39,7 +39,8 @@ class MemcachedMutexTest extends TestCase
     /**
      * Tests failing to acquire the lock within the timeout.
      *
-     * @expectedException \malkusch\lock\exception\TimeoutException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\TimeoutException
      */
     public function testFailAcquireLock()
     {
@@ -56,7 +57,8 @@ class MemcachedMutexTest extends TestCase
     /**
      * Tests failing to release a lock.
      *
-     * @expectedException \malkusch\lock\exception\LockReleaseException
+     * @test
+     * @expectedException \m_rubin_itmegastar_com\lock\exception\LockReleaseException
      */
     public function testFailReleasingLock()
     {
