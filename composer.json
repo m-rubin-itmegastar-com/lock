@@ -1,9 +1,9 @@
 {
-    "name": "malkusch/lock",
+    "name": "m-rubin-itmegastar-com/lock",
     "type": "library",
     "description": "Mutex library for exclusive code execution.",
     "keywords": ["mutex", "lock", "locking", "flock", "semaphore", "redlock", "memcache", "redis", "cas", "advisory locks", "mysql", "postgresql"],
-    "homepage": "https://github.com/malkusch/lock",
+    "homepage": "https://github.com/m-rubin-itmegastar-com/lock",
     "license": "WTFPL",
     "authors": [
         {
@@ -15,6 +15,11 @@
         {
             "name": "Willem Stuursma-Ruwen",
             "email": "willem@stuursma.name",
+            "role": "Developer"
+        },
+        {
+            "name": "MihanEntalpo",
+            "email": "m.rubin@itmegastar.com",
             "role": "Developer"
         }
     ],
@@ -33,14 +38,13 @@
         "ext-memcached": "*",
         "ext-pcntl": "*",
         "ext-pdo_mysql": "*",
-        "ext-pdo_sqlite": "*",
         "ext-redis": "*",
         "eloquent/liberator": "^2.0",
-        "johnkary/phpunit-speedtrap": "^1.0",
+        "johnkary/phpunit-speedtrap": "~1.1.0",
         "kriswallsmith/spork": "^0.3",
         "mikey179/vfsStream": "^1.5.0",
         "php-mock/php-mock-phpunit": "^1",
-        "phpunit/phpunit": "^5",
+        "phpunit/phpunit": "~5.0.0",
         "predis/predis": "~1.0",
         "squizlabs/php_codesniffer": "^3.2"
     },
